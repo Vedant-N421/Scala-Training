@@ -1,0 +1,3 @@
+object ClassesTraits extends App{
+
+}
