@@ -16,24 +16,26 @@ object Enums extends App{
 
   ls.foreach(x => println(x.toString))
 
+  case class Tiger()
+
   object TypeOfAnimalEnum extends Enumeration{
     val Reptile, Bird, Mammal, Amphibian = Value
   }
 
-  object canFlyEnum extends Enumeration{
-    val Yes, No, MaybeIfItFalls = Value
+  object CanFlyEnum extends Enumeration{
+    val Yes, No, Maybe = Value
   }
 
-  object canSwim extends Enumeration{
+  object CanDrown extends Enumeration{
     val Yes, No = Value
   }
 
-//  case class Animal(typ: TypeOfAnimalEnum)
+  sealed trait Animal
 
-  sealed trait Animals
+  case object Tiger extends Animal
+  case object Lion extends Animal
+  case object Cat extends Animal
 
-  case object AnimalType extends Animals
-  case object Flies extends Animals
-  case object Swims extends Animals
+  val tiger = Tiger()
 
 }
