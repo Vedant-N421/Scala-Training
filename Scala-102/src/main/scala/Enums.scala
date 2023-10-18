@@ -28,14 +28,12 @@ object Enums extends App{
     val Yes, No = Value
   }
 
-  case class Animal(typ: TypeOfAnimalEnum)
+//  case class Animal(typ: TypeOfAnimalEnum)
 
   sealed trait Animals
 
   case object AnimalType extends Animals
   case object Flies extends Animals
   case object Swims extends Animals
-
-  val tiger = 
 
 }
