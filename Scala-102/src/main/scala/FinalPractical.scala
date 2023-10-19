@@ -1,5 +1,6 @@
 
 object FinalPractical extends App{
+
   object temp extends Enumeration{
     val Hot, Cold = Value
   }
@@ -62,14 +63,13 @@ object FinalPractical extends App{
     case starCount => 1 - (0.025 * starCount)
   }
 
-  val serviceChargeBill: (List[MenuItem], Int) => BigDecimal = (bill, loyaltyPoints) => bill match{
+  val getBill: (List[MenuItem], Int) => BigDecimal = (bill, loyaltyPoints) => bill match{
     case x if bill.exists(item => item.isPremium) => getTotalBill(bill, loyaltyPoints) + (getTotalBill(bill, loyaltyPoints) * 0.25).min(40)
     case y if bill.exists(item => item.temperature == temp.Hot && !item.isDrink) => getTotalBill(bill, loyaltyPoints) + (getTotalBill(bill, loyaltyPoints) * 0.2).min(20)
     case z if bill.exists(item => !item.isDrink) => getTotalBill(bill, loyaltyPoints) + (getTotalBill(bill, loyaltyPoints) * 0.1)
     case _ => getTotalBill(bill, loyaltyPoints)
   }
 
-  val testShoppingList: List[MenuItem] = List(Cola(), Coffee(), SteakSandwich())
-
-  println(f"The total is: £${serviceChargeBill(testShoppingList, 3).setScale(2, BigDecimal.RoundingMode.HALF_UP)}")
+  val testShoppingList: List[MenuItem] = List(Cola(), SteakSandwich())
+  println(f"The total is: £${getBill(testShoppingList, 3).setScale(2, BigDecimal.RoundingMode.HALF_UP)}")
 }
