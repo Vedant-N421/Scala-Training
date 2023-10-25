@@ -1,5 +1,6 @@
 
-object FinalPractical extends App{
+
+object FinalPractical {
 
   object temp extends Enumeration{
     val Hot, Cold = Value
@@ -70,6 +71,34 @@ object FinalPractical extends App{
     case _ => getTotalBill(bill, loyaltyPoints)
   }
 
-  val testShoppingList: List[MenuItem] = List(Cola(), SteakSandwich())
-  println(f"The total is: £${getBill(testShoppingList, 3).setScale(2, BigDecimal.RoundingMode.HALF_UP)}")
+//  def foobar: Int = 3
+//  def foobar_=(value: Int): Unit = println(234)
+//
+//  def unary_! : Int = 3
+//
+//  def blabla_:(value: Int): Int = value
+//}
+//
+//object Fooo extends App {
+//
+//  final case class
+//
+//  println(12 :: 13 :: Nil)
+//
+//  println(12 - 33 - 44)
+//
+//  FinalPractical.foobar = 333
+//  println(FinalPractical.foobar)
+//  println(333 blabla_: FinalPractical)
+//  println(FinalPractical.blabla_:(333))
+//
+//  FinalPractical blabla 3
+//  FinalPractical.blabla(3)
+//}
+
+//object MainRunnable {
+//  def main(args: Array[String]): Unit = {
+//    val testShoppingList: List[MenuItem] = List(Cola(), SteakSandwich())
+//    println(f"The total is: £${getBill(testShoppingList, 3).setScale(2, BigDecimal.RoundingMode.HALF_UP)}")
+//  }
 }
