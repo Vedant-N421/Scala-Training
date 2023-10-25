@@ -2,7 +2,7 @@
 [error]   Not found
 [error]   Not found
 [error]   not found: /Users/vedant.nemane/.ivy2/localorg.scalatest/scalatest/3.2.15/ivys/ivy.xml
-[error]   download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/org/scalatest/scalatest/3.2.15/scalatest-3.2.15.pom
+[error]   not found: https://repo1.maven.org/maven2/org/scalatest/scalatest/3.2.15/scalatest-3.2.15.pom
 [error] 	at lmcoursier.CoursierDependencyResolution.unresolvedWarningOrThrow(CoursierDependencyResolution.scala:344)
 [error] 	at lmcoursier.CoursierDependencyResolution.$anonfun$update$38(CoursierDependencyResolution.scala:313)
 [error] 	at scala.util.Either$LeftProjection.map(Either.scala:573)
@@ -37,4 +37,4 @@
 [error]   Not found
 [error]   Not found
 [error]   not found: /Users/vedant.nemane/.ivy2/localorg.scalatest/scalatest/3.2.15/ivys/ivy.xml
-[error]   download error: Caught java.net.UnknownHostException (repo1.maven.org) while downloading https://repo1.maven.org/maven2/org/scalatest/scalatest/3.2.15/scalatest-3.2.15.pom
+[error]   not found: https://repo1.maven.org/maven2/org/scalatest/scalatest/3.2.15/scalatest-3.2.15.pom
